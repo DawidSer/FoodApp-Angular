@@ -1,7 +1,11 @@
 <h2>Lista restauracji</h2>
 <section class="list">
-  <app-restaurant-card />
-  <app-restaurant-card />
-  <app-restaurant-card />
-  <app-restaurant-card />
+  <!-- @if(restaurants().length === 0) {
+    <div class="no-restaurants">Brak restauracji</div>
+  } -->
+  @for (restaurant of restaurants(); track restaurant.id) {
+    <app-restaurant-card [restaurant]="restaurant" />
+  } @empty {
+    <div class="no-restaurants">Brak restauracji</div>
+  }
 </section>
