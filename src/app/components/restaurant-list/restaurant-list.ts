@@ -1,7 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RestaurantCard } from '../restaurant-card/restaurant-card';
-import data from '../../../data/restaurants.json';
 import { Restaurant } from '../../models/restaurant.model';
+import { Restaurants } from '../../services/restaurants';
 
 @Component({
   imports: [RestaurantCard],
@@ -10,7 +10,9 @@ import { Restaurant } from '../../models/restaurant.model';
   templateUrl: './restaurant-list.html',
 })
 export class RestaurantList {
-  private restaurants = signal(data as Restaurant[]);
+  restaurantsService = inject(Restaurants);
+  readonly restaurants = this.restaurantsService.getAll();
+
   onSearch() {
     this.restaurants.set([]);
     // this.restaurants.update((current) => newDate);
