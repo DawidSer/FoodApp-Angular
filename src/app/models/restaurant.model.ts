@@ -4,13 +4,15 @@ export type Restaurant = {
   description: string;
   cuisine: CuisineType;
   imageUrl?: string;
-  rating: number;
+  rating?: number;
   deliveryTimeMin: number;
   deliveryTimeMax: number;
   deliveryFee: number;
   minimumOrderValue: number;
   isActive: boolean;
 };
+// export type RestaurantWithoutId = Omit<Restaurant, 'id'|'address'>;
+
 export type CuisineType =
   | 'italian'
   | 'polish'

@@ -1,5 +1,5 @@
 import { Component, input, model, signal } from '@angular/core';
-import { form, FormField } from '@angular/forms/signals';
+import { form, FormField, min, minLength, required, validate } from '@angular/forms/signals';
 import { Restaurant } from '../../models/restaurant.model';
 import { RouterLink } from '@angular/router';
 
@@ -15,7 +15,22 @@ export class RestaurantCard {
 
   restaurant = model.required<Restaurant>();
 
-  private form = form(this.restaurant);
+  readonly form = form(this.restaurant, (schema) => {
+    required(schema.name);
+    minLength(schema.description, 40, {
+      error: { kind: 'minLength', message: 'Opis musi mieć min 40 znaków!' },
+    });
+    min(schema.deliveryTimeMin, 0);
+    validate(schema.deliveryTimeMax, ({ value, valueOf }) => {
+      if (value() < valueOf(schema.deliveryTimeMin)) {
+        return {
+          kind: 'invalidDateRange',
+          message: 'End date must be after start date',
+        };
+      }
+      return null;
+    });
+  });
 
   private updateRestaurantData() {
     console.log('Updating restaurant data...', this.restaurant());

@@ -11,4 +11,16 @@ export class Restaurants {
   getById(id: number) {
     console.log('[restaurant service] getById', id);
   }
+  update() {}
+  create() {}
+  delete() {}
+
+  private saveToLocalStorage(key: string, data: any) {
+    const jsonData = JSON.stringify(this.data());
+    localStorage.setItem(key, jsonData);
+  }
+  private getFromLocalStorage(key: string) {
+    const storedData = localStorage.getItem(key);
+    return storedData ? JSON.parse(storedData) : undefined;
+  }
 }
