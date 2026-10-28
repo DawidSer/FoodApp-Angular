@@ -13,6 +13,7 @@ export class RestaurantForm {
   restaurant = signal<Omit<Restaurant, 'id'>>({
     name: '',
     description: '',
+    rating: 0,
     cuisine: 'polish',
     imageUrl: '',
     deliveryTimeMin: 10,

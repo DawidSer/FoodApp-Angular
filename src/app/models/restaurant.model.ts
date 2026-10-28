@@ -4,7 +4,7 @@ export type Restaurant = {
   description: string;
   cuisine: CuisineType;
   imageUrl?: string;
-  rating?: number;
+  rating: number;
   deliveryTimeMin: number;
   deliveryTimeMax: number;
   deliveryFee: number;
@@ -12,6 +12,8 @@ export type Restaurant = {
   isActive: boolean;
 };
 // export type RestaurantWithoutId = Omit<Restaurant, 'id'|'address'>;
+
+export type SortField = 'rating' | 'deliveryTimeMin' | 'deliveryFee';
 
 export type CuisineType =
   | 'italian'

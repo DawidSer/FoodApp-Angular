@@ -1,11 +1,69 @@
 <h2>Lista restauracji</h2>
+
+<div>
+  <label for="searchInput">Wpisz nazwę restauracji</label>
+  <input
+    type="search"
+    #searchInput
+    [value]="search()"
+    (input)="onSearch(searchInput.value)"
+    placeholder="Wpisz wartość..."
+    id="searchInput"
+  />
+</div>
+
+<div>
+  <label for="cuisineSelect">Wybierz rodzaj</label>
+  <select
+    #cuisineSelect
+    [value]="cuisine()"
+    (change)="onCuisineChange(cuisineSelect.value)"
+    id="cuisineSelect"
+  >
+    <option selected value="">Wszystkie</option>
+    @for (c of cuisineOptions; track c) {
+      <option [value]="c">{{c}}</option>
+    }
+  </select>
+</div>
+
+<div>
+  <label for="onlyActiveCheckbox">Czy aktywna</label>
+  <input
+    type="checkbox"
+    #onlyActiveCheckbox
+    [checked]="onlyActive()"
+    (change)="onOnlyActiveChange(onlyActiveCheckbox.checked)"
+    id="onlyActiveCheckbox"
+  />
+</div>
+
+
+<div>
+  <label for="sortSelect">Kolejność sortowania</label>
+  <select
+    #sortSelect
+    (change)="onSortChange(sortSelect.value)"
+    id="sortSelect"
+    [value]="sortBy()"
+  >
+    @for (o of sortOptions; track o) {
+      <option [value]="o.value">{{o.label}}</option>
+    }
+  </select>
+</div>
+
+<button
+  (click)="onReset()"
+>
+  Wyczyść filtry
+</button>
+
+
 <section class="list">
-  <!-- @if(restaurants().length === 0) {
-    <div class="no-restaurants">Brak restauracji</div>
-  } -->
   @for (restaurant of restaurants(); track restaurant.id) {
     <app-restaurant-card [restaurant]="restaurant" />
   } @empty {
-    <div class="no-restaurants">Brak restauracji</div>
+    <div class="no-restaurants">Nie znaleziono restauracji.</div>
   }
 </section>
