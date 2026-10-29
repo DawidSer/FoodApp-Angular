@@ -1,10 +1,10 @@
 import { Component, input, model, signal } from '@angular/core';
-import { form, FormField, min, minLength, required, validate } from '@angular/forms/signals';
+import { form, min, minLength, required, validate } from '@angular/forms/signals';
 import { Restaurant } from '../../models/restaurant.model';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [FormField, RouterLink],
+  imports: [RouterLink],
   selector: 'app-restaurant-card',
   styleUrl: './restaurant-card.scss',
   templateUrl: './restaurant-card.html',
