@@ -1,5 +1,12 @@
+:host {
+  display: block;
+  flex: 1 1 280px;
+  max-width: 340px;
+}
+
 .card {
   background: #fff;
   border-radius: 8px;
   padding: 30px;
+  overflow-wrap: anywhere;
 }
