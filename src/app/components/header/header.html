@@ -1,1 +1,15 @@
-<h1>Food App</h1>
+<header class="header">
+  <h1 class="brand">
+    <a routerLink="/restaurants">Food App</a>
+  </h1>
+
+  <nav class="nav">
+    <a
+      routerLink="/restaurants"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Restauracje
+    </a>
+  </nav>
+</header>
