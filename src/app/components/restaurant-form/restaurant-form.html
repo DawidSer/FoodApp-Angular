@@ -1,4 +1,103 @@
-<h2>Nowa restauracja</h2>
-<section>
-  <p>Nazwa: <input type="text" /></p>
-</section>
+<form class="form" (submit)="onSubmit($event)">
+  <h2 class="mt-4">{{ isEdit() ? 'Edytuj restaurację' : 'Nowa restauracja' }}</h2>
+
+  <div class="mb-3">
+    <label class="form-label" for="name">Nazwa</label>
+    <input class="form-control" id="name" type="text" [formField]="form.name" />
+    @if (form.name().touched() && form.name().errors().length) {
+      <p class="text-danger small mb-0">
+        {{ form.name().errors()[0].message || 'Pole wymagane' }}
+      </p>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="description">Opis</label>
+    <textarea class="form-control" id="description" rows="3" [formField]="form.description"></textarea>
+    @if (form.description().touched() && form.description().errors().length) {
+      <p class="text-danger small mb-0">{{ form.description().errors()[0].message }}</p>
+    }
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="cuisine">Rodzaj kuchni</label>
+    <select class="form-select" id="cuisine" [formField]="form.cuisine">
+      @for (c of cuisines; track c) {
+        <option [value]="c">{{ c }}</option>
+      }
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="address">Adres</label>
+    <input class="form-control" id="address" type="text" [formField]="form.address" />
+    @if (form.address().touched() && form.address().errors().length) {
+      <p class="text-danger small mb-0">
+        {{ form.address().errors()[0].message || 'Pole wymagane' }}
+      </p>
+    }
+  </div>
+
+  @if (form.imageUrl; as imageUrlField) {
+    <div class="mb-3">
+      <label class="form-label" for="imageUrl">Zdjęcie (URL)</label>
+      <input class="form-control" id="imageUrl" type="text" [formField]="imageUrlField" />
+    </div>
+  }
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-md-4">
+      <label class="form-label" for="rating">Ocena</label>
+      <input class="form-control" id="rating" type="number" step="0.1" [formField]="form.rating" />
+    </div>
+    <div class="col-12 col-md-4">
+      <label class="form-label" for="deliveryTimeMin">Czas dostawy od (min)</label>
+      <input class="form-control" id="deliveryTimeMin" type="number" [formField]="form.deliveryTimeMin" />
+      @if (form.deliveryTimeMin().touched() && form.deliveryTimeMin().errors().length) {
+        <p class="text-danger small mb-0">{{ form.deliveryTimeMin().errors()[0].message }}</p>
+      }
+    </div>
+    <div class="col-12 col-md-4">
+      <label class="form-label" for="deliveryTimeMax">Czas dostawy do (min)</label>
+      <input class="form-control" id="deliveryTimeMax" type="number" [formField]="form.deliveryTimeMax" />
+      @if (form.deliveryTimeMax().touched() && form.deliveryTimeMax().errors().length) {
+        <p class="text-danger small mb-0">{{ form.deliveryTimeMax().errors()[0].message }}</p>
+      }
+    </div>
+  </div>
+
+  <div class="row g-3 mb-3">
+    <div class="col-12 col-md-6">
+      <label class="form-label" for="deliveryFee">Koszt dostawy (zł)</label>
+      <input class="form-control" id="deliveryFee" type="number" step="0.01" [formField]="form.deliveryFee" />
+      @if (form.deliveryFee().touched() && form.deliveryFee().errors().length) {
+        <p class="text-danger small mb-0">{{ form.deliveryFee().errors()[0].message }}</p>
+      }
+    </div>
+    <div class="col-12 col-md-6">
+      <label class="form-label" for="minimumOrderValue">Min. wartość zamówienia (zł)</label>
+      <input
+        class="form-control"
+        id="minimumOrderValue"
+        type="number"
+        step="0.01"
+        [formField]="form.minimumOrderValue"
+      />
+      @if (form.minimumOrderValue().touched() && form.minimumOrderValue().errors().length) {
+        <p class="text-danger small mb-0">{{ form.minimumOrderValue().errors()[0].message }}</p>
+      }
+    </div>
+  </div>
+
+  <div class="form-check mb-3">
+    <input class="form-check-input" type="checkbox" id="isActive" [formField]="form.isActive" />
+    <label class="form-check-label" for="isActive">Restauracja aktywna</label>
+  </div>
+
+  <div class="actions">
+    <button class="btn btn-primary" type="submit" [disabled]="form().invalid()">
+      {{ isEdit() ? 'Zapisz zmiany' : 'Utwórz restaurację' }}
+    </button>
+    <a class="btn btn-outline-secondary" routerLink="/admin">Anuluj</a>
+  </div>
+</form>

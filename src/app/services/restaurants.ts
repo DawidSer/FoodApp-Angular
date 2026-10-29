@@ -17,9 +17,26 @@ export class Restaurants {
   getMenu(cuisine: CuisineType): MenuCategory[] {
     return this.menus[cuisine] ?? [];
   }
-  update() {}
-  create() {}
-  delete() {}
+
+  create(restaurant: Omit<Restaurant, 'id'>) {
+    this.data.update((list) => {
+      const nextId = list.length ? Math.max(...list.map((r) => r.id)) + 1 : 1;
+      return [...list, { ...restaurant, id: nextId }];
+    });
+  }
+  update(restaurant: Restaurant) {
+    this.data.update((list) =>
+      list.map((x) => (x.id === restaurant.id ? restaurant : x)),
+    );
+  }
+  delete() {
+
+  }
+  deactivate(id: number) {
+    this.data.update((list) =>
+      list.map((x) => (x.id === id ? { ...x, isActive: false } : x)),
+    );
+  }
 
   private saveToLocalStorage(key: string, data: any) {
     const jsonData = JSON.stringify(this.data());

@@ -1,9 +1,9 @@
 @if (restaurant(); as r) {
   <section class="details">
-    <h2>{{ r.name }}</h2>
+    <h2 class="mt-4 mb-4">{{ r.name }}</h2>
 
     @if (r.imageUrl) {
-      <img class="image" [src]="r.imageUrl" [alt]="r.name" />
+      <img class="image mb-4" [src]="r.imageUrl" [alt]="r.name" />
     }
 
     <p class="description">{{ r.description }}</p>
@@ -22,7 +22,7 @@
     <h3>Menu</h3>
     @for (category of menu(); track category.id) {
       <h4>{{ category.name }}</h4>
-      <table>
+      <table class="table table-sm">
         <thead>
           <tr>
             <th>Nazwa</th>
@@ -39,7 +39,7 @@
                 <td>{{product.description}}</td>
                 <td>{{product.price}}</td>
                 <td>{{product.isAvailable ? "tak" : "nie"}}</td>
-                <td><button [disabled]="!product.isAvailable">Dodaj do koszyka</button></td>
+                <td><button class="btn btn-primary" [disabled]="!product.isAvailable">Dodaj do koszyka</button></td>
               </tr>
             }
           </tbody>

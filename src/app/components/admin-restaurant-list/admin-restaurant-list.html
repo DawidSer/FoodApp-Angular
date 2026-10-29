@@ -1,0 +1,31 @@
+<h2 class="mt-4 mb-4">Panel administracyjny</h2>
+
+<a class="btn btn-primary mt-3 mb-3" routerLink="/admin/restaurant/new">+ Dodaj restaurację</a>
+
+<table class="table table-striped table-hover align-middle">
+  <thead>
+    <tr>
+      <th>Nazwa</th>
+      <th>Kuchnia</th>
+      <th>Ocena</th>
+      <th>Aktywna</th>
+      <th>Akcje</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (r of restaurants(); track r.id) {
+      <tr>
+        <td>{{ r.name }}</td>
+        <td>{{ r.cuisine }}</td>
+        <td>{{ r.rating }}</td>
+        <td>{{ r.isActive ? 'aktywna' : 'nieaktywna' }}</td>
+        <td class="actions">
+          <a class="btn btn-outline-primary btn-sm" [routerLink]="['/admin/restaurant', r.id, 'edit']">Edytuj</a>
+          @if (r.isActive) {
+            <button class="btn btn-outline-danger btn-sm" type="button" (click)="onDeactivate(r.id)">Deaktywuj</button>
+          }
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
