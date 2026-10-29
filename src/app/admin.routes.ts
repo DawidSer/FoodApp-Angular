@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { AdminRestaurantList } from './components/admin-restaurant-list/admin-restaurant-list';
 import { RestaurantForm } from './components/restaurant-form/restaurant-form';
 import { AdminUsersList } from './components/admin-users-list/admin-users-list';
-import { AdminUserDetails } from './components/admin-user-details/admin-user-details';
+import { AdminUserForm } from './components/admin-user-form/admin-user-form';
 
 export const adminRoutes: Routes = [
   {
@@ -22,8 +22,8 @@ export const adminRoutes: Routes = [
     component: AdminUsersList,
   },
   {
-    path: 'user/:id',
-    component: AdminUserDetails,
+    path: 'users/new',
+    component: AdminUserForm,
   },
 ];
 
