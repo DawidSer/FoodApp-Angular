@@ -1,0 +1,596 @@
+{
+  "italian": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 1,
+          "name": "Bruschetta",
+          "description": "Grillowany chleb z pomidorami, czosnkiem i bazylią",
+          "price": 18,
+          "imageUrl": "https://picsum.photos/seed/italian-1/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 2,
+          "name": "Arancini",
+          "description": "Kulki ryżowe z mozzarellą i sosem pomidorowym",
+          "price": 22,
+          "imageUrl": "https://picsum.photos/seed/italian-2/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Pizza",
+      "products": [
+        {
+          "id": 3,
+          "name": "Margherita",
+          "description": "Sos pomidorowy, mozzarella, bazylia",
+          "price": 32,
+          "imageUrl": "https://picsum.photos/seed/italian-3/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 4,
+          "name": "Pepperoni",
+          "description": "Sos pomidorowy, mozzarella, salami pepperoni",
+          "price": 38,
+          "imageUrl": "https://picsum.photos/seed/italian-4/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 5,
+          "name": "Quattro Formaggi",
+          "description": "Cztery sery: mozzarella, gorgonzola, parmezan, fontina",
+          "price": 42,
+          "imageUrl": "https://picsum.photos/seed/italian-5/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Makarony",
+      "products": [
+        {
+          "id": 6,
+          "name": "Carbonara",
+          "description": "Spaghetti, guanciale, jajko, pecorino",
+          "price": 36,
+          "imageUrl": "https://picsum.photos/seed/italian-6/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 7,
+          "name": "Lasagne",
+          "description": "Warstwy makaronu z mięsem i beszamelem",
+          "price": 40,
+          "imageUrl": "https://picsum.photos/seed/italian-7/300/200",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Desery",
+      "products": [
+        {
+          "id": 8,
+          "name": "Tiramisu",
+          "description": "Klasyczny deser z mascarpone i kawą",
+          "price": 22,
+          "imageUrl": "https://picsum.photos/seed/italian-8/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "polish": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 9,
+          "name": "Tatar wołowy",
+          "description": "Surowa wołowina z żółtkiem i ogórkiem",
+          "price": 34,
+          "imageUrl": "https://picsum.photos/seed/polish-9/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 10,
+          "name": "Śledź w oleju",
+          "description": "Śledź z cebulą i przyprawami",
+          "price": 20,
+          "imageUrl": "https://picsum.photos/seed/polish-10/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 11,
+          "name": "Pierogi ruskie",
+          "description": "Pierogi z twarogiem i ziemniakami",
+          "price": 28,
+          "imageUrl": "https://picsum.photos/seed/polish-11/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 12,
+          "name": "Kotlet schabowy",
+          "description": "Panierowany schab z ziemniakami i surówką",
+          "price": 36,
+          "imageUrl": "https://picsum.photos/seed/polish-12/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 13,
+          "name": "Żurek",
+          "description": "Zakwas żytni z białą kiełbasą i jajkiem",
+          "price": 26,
+          "imageUrl": "https://picsum.photos/seed/polish-13/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Napoje",
+      "products": [
+        {
+          "id": 14,
+          "name": "Kompot",
+          "description": "Domowy kompot owocowy",
+          "price": 10,
+          "imageUrl": "https://picsum.photos/seed/polish-14/300/200",
+          "isAvailable": false
+        },
+        {
+          "id": 15,
+          "name": "Herbata",
+          "description": "Czarna herbata",
+          "price": 8,
+          "imageUrl": "https://picsum.photos/seed/polish-15/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "chinese": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 16,
+          "name": "Spring rolls",
+          "description": "Chrupiące sajgonki z warzywami",
+          "price": 22,
+          "imageUrl": "https://picsum.photos/seed/chinese-16/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 17,
+          "name": "Wonton soup",
+          "description": "Zupa z pierożkami wonton",
+          "price": 24,
+          "imageUrl": "https://picsum.photos/seed/chinese-17/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 18,
+          "name": "Kurczak sweet & sour",
+          "description": "Kurczak w sosie słodko-kwaśnym z ryżem",
+          "price": 38,
+          "imageUrl": "https://picsum.photos/seed/chinese-18/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 19,
+          "name": "Wołowina w sosie ostrygowym",
+          "description": "Wołowina z warzywami i sosem ostrygowym",
+          "price": 44,
+          "imageUrl": "https://picsum.photos/seed/chinese-19/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 20,
+          "name": "Chow mein",
+          "description": "Makaron smażony z warzywami",
+          "price": 34,
+          "imageUrl": "https://picsum.photos/seed/chinese-20/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "thai": [
+    {
+      "id": 1,
+      "name": "Zupy",
+      "products": [
+        {
+          "id": 21,
+          "name": "Tom Yum",
+          "description": "Ostra zupa z krewetkami i trawą cytrynową",
+          "price": 32,
+          "imageUrl": "https://picsum.photos/seed/thai-21/300/200",
+          "isAvailable": false
+        },
+        {
+          "id": 22,
+          "name": "Tom Kha",
+          "description": "Zupa kokosowa z kurczakiem",
+          "price": 30,
+          "imageUrl": "https://picsum.photos/seed/thai-22/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 23,
+          "name": "Pad Thai",
+          "description": "Makaron ryżowy z krewetkami i orzeszkami",
+          "price": 40,
+          "imageUrl": "https://picsum.photos/seed/thai-23/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 24,
+          "name": "Zielone curry",
+          "description": "Curry z kurczakiem i bazylią tajską",
+          "price": 42,
+          "imageUrl": "https://picsum.photos/seed/thai-24/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "american": [
+    {
+      "id": 1,
+      "name": "Burgery",
+      "products": [
+        {
+          "id": 25,
+          "name": "Classic Burger",
+          "description": "Wołowina, sałata, pomidor, cebula, sos",
+          "price": 32,
+          "imageUrl": "https://picsum.photos/seed/american-25/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 26,
+          "name": "Cheeseburger",
+          "description": "Wołowina z podwójnym cheddarem",
+          "price": 36,
+          "imageUrl": "https://picsum.photos/seed/american-26/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 27,
+          "name": "Bacon Burger",
+          "description": "Wołowina, bekon, cheddar, sos BBQ",
+          "price": 39,
+          "imageUrl": "https://picsum.photos/seed/american-27/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Frytki",
+      "products": [
+        {
+          "id": 28,
+          "name": "French Fries",
+          "description": "Złociste frytki z solą",
+          "price": 12,
+          "imageUrl": "https://picsum.photos/seed/american-28/300/200",
+          "isAvailable": false
+        },
+        {
+          "id": 29,
+          "name": "Cheese Fries",
+          "description": "Frytki z sosem serowym",
+          "price": 18,
+          "imageUrl": "https://picsum.photos/seed/american-29/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Drinks",
+      "products": [
+        {
+          "id": 30,
+          "name": "Cola",
+          "description": "Napój gazowany 0,5l",
+          "price": 10,
+          "imageUrl": "https://picsum.photos/seed/american-30/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 31,
+          "name": "Milkshake",
+          "description": "Koktajl mleczny waniliowy",
+          "price": 18,
+          "imageUrl": "https://picsum.photos/seed/american-31/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "indian": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 32,
+          "name": "Samosa",
+          "description": "Trójkątne pierożki z warzywami",
+          "price": 20,
+          "imageUrl": "https://picsum.photos/seed/indian-32/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 33,
+          "name": "Naan",
+          "description": "Chlebek naan z czosnkiem",
+          "price": 14,
+          "imageUrl": "https://picsum.photos/seed/indian-33/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Curry",
+      "products": [
+        {
+          "id": 34,
+          "name": "Butter Chicken",
+          "description": "Kurczak w sosie maślanym",
+          "price": 42,
+          "imageUrl": "https://picsum.photos/seed/indian-34/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 35,
+          "name": "Chicken Tikka Masala",
+          "description": "Kurczak w sosie pomidorowo-korzennym",
+          "price": 44,
+          "imageUrl": "https://picsum.photos/seed/indian-35/300/200",
+          "isAvailable": false
+        },
+        {
+          "id": 36,
+          "name": "Palak Paneer",
+          "description": "Ser paneer ze szpinakiem",
+          "price": 38,
+          "imageUrl": "https://picsum.photos/seed/indian-36/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "japanese": [
+    {
+      "id": 1,
+      "name": "Sushi",
+      "products": [
+        {
+          "id": 37,
+          "name": "Sake Nigiri",
+          "description": "Ryż z łososiem (2 szt.)",
+          "price": 24,
+          "imageUrl": "https://picsum.photos/seed/japanese-37/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 38,
+          "name": "California Roll",
+          "description": "Rolka z krabem, awokado i ogórkiem (8 szt.)",
+          "price": 38,
+          "imageUrl": "https://picsum.photos/seed/japanese-38/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 39,
+          "name": "Dragon Roll",
+          "description": "Rolka z krewetką tempura i węgorzem",
+          "price": 46,
+          "imageUrl": "https://picsum.photos/seed/japanese-39/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Zupy",
+      "products": [
+        {
+          "id": 40,
+          "name": "Miso soup",
+          "description": "Zupa miso z tofu i wodorostami",
+          "price": 18,
+          "imageUrl": "https://picsum.photos/seed/japanese-40/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "french": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 41,
+          "name": "Zupa cebulowa",
+          "description": "Zapiekana zupa cebulowa z grzankami",
+          "price": 26,
+          "imageUrl": "https://picsum.photos/seed/french-41/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 42,
+          "name": "Ślimaki",
+          "description": "Ślimaki w sosie czosnkowo-maślanym",
+          "price": 34,
+          "imageUrl": "https://picsum.photos/seed/french-42/300/200",
+          "isAvailable": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 43,
+          "name": "Coq au vin",
+          "description": "Kurczak duszony w czerwonym winie",
+          "price": 48,
+          "imageUrl": "https://picsum.photos/seed/french-43/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 44,
+          "name": "Ratatouille",
+          "description": "Duszone warzywa prowansalskie",
+          "price": 34,
+          "imageUrl": "https://picsum.photos/seed/french-44/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Desery",
+      "products": [
+        {
+          "id": 45,
+          "name": "Crème brûlée",
+          "description": "Krem waniliowy z karmelizowanym cukrem",
+          "price": 26,
+          "imageUrl": "https://picsum.photos/seed/french-45/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ],
+  "mexican": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 46,
+          "name": "Guacamole",
+          "description": "Pasta z awokado z nachos",
+          "price": 24,
+          "imageUrl": "https://picsum.photos/seed/mexican-46/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 47,
+          "name": "Quesadilla",
+          "description": "Tortilla z serem i kurczakiem",
+          "price": 28,
+          "imageUrl": "https://picsum.photos/seed/mexican-47/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 48,
+          "name": "Tacos al pastor",
+          "description": "Tortille z wieprzowiną i ananasem (3 szt.)",
+          "price": 36,
+          "imageUrl": "https://picsum.photos/seed/mexican-48/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 49,
+          "name": "Burrito",
+          "description": "Duża tortilla z mięsem, ryżem i fasolą",
+          "price": 38,
+          "imageUrl": "https://picsum.photos/seed/mexican-49/300/200",
+          "isAvailable": false
+        }
+      ]
+    }
+  ],
+  "greek": [
+    {
+      "id": 1,
+      "name": "Przystawki",
+      "products": [
+        {
+          "id": 50,
+          "name": "Tzatziki",
+          "description": "Jogurt z ogórkiem i czosnkiem",
+          "price": 18,
+          "imageUrl": "https://picsum.photos/seed/greek-50/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 51,
+          "name": "Halloumi",
+          "description": "Grillowany ser halloumi",
+          "price": 26,
+          "imageUrl": "https://picsum.photos/seed/greek-51/300/200",
+          "isAvailable": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dania główne",
+      "products": [
+        {
+          "id": 52,
+          "name": "Gyros",
+          "description": "Mięso z pity, warzywami i sosem tzatziki",
+          "price": 36,
+          "imageUrl": "https://picsum.photos/seed/greek-52/300/200",
+          "isAvailable": true
+        },
+        {
+          "id": 53,
+          "name": "Moussaka",
+          "description": "Zapiekanka z bakłażana i mięsa mielonego",
+          "price": 40,
+          "imageUrl": "https://picsum.photos/seed/greek-53/300/200",
+          "isAvailable": true
+        }
+      ]
+    }
+  ]
+}

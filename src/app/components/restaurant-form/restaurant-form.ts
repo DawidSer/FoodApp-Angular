@@ -20,6 +20,7 @@ export class RestaurantForm {
     deliveryTimeMax: 30,
     deliveryFee: 10,
     minimumOrderValue: 20,
+    address: '',
     isActive: true,
   });
   form = form(this.restaurant, (schema) => {

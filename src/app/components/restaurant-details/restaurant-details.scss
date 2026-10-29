@@ -1,0 +1,11 @@
+.image {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.product-unavailable {
+  opacity: 0.5;
+  text-decoration: line-through;
+}

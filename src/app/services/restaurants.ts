@@ -1,15 +1,21 @@
 import { Service, signal } from '@angular/core';
 import data from '../../data/restaurants.json';
-import { Restaurant } from '../models/restaurant.model';
+import menuData from '../../data/menus.json';
+import { CuisineType, MenuCategory, Restaurant } from '../models/restaurant.model';
 
 @Service()
 export class Restaurants {
   private data = signal(data as Restaurant[]);
+  private menus = menuData as Record<CuisineType, MenuCategory[]>;
+
   getAll() {
     return this.data;
   }
-  getById(id: number) {
-    console.log('[restaurant service] getById', id);
+  getById(id: number): Restaurant | undefined {
+    return this.data().find((x) => x.id === id);
+  }
+  getMenu(cuisine: CuisineType): MenuCategory[] {
+    return this.menus[cuisine] ?? [];
   }
   update() {}
   create() {}

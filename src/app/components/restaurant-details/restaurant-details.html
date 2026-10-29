@@ -1,2 +1,53 @@
-<p>Restaurant ID: {{ id() }}</p>
-<p>Restaurant Name: {{ restaurant() }}</p>
+@if (restaurant(); as r) {
+  <section class="details">
+    <h2>{{ r.name }}</h2>
+
+    @if (r.imageUrl) {
+      <img class="image" [src]="r.imageUrl" [alt]="r.name" />
+    }
+
+    <p class="description">{{ r.description }}</p>
+    <p class="cuisine">Kuchnia: {{ r.cuisine }}</p>
+    <p class="rating">Ocena: {{ r.rating }}/10</p>
+    <p class="delivery-time">
+      Czas dostawy: {{ r.deliveryTimeMin }}-{{ r.deliveryTimeMax }} min
+    </p>
+    <p class="delivery-cost">Koszt dostawy: {{ r.deliveryFee }} zł</p>
+    <p class="minimum-order">Min. zamówienie: {{ r.minimumOrderValue }} zł</p>
+    <p class="minimum-order">Adres: {{r.address}}</p>
+    <p class="status">Status: {{ r.isActive ? 'aktywna' : 'nieaktywna' }}</p>
+  </section>
+
+  <section class="menu">
+    <h3>Menu</h3>
+    @for (category of menu(); track category.id) {
+      <h4>{{ category.name }}</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>Nazwa</th>
+            <th>Opis</th>
+            <th>Cena</th>
+            <th>Dostępność</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (product of category.products; track product.id) {
+              <tr [class.product-unavailable]="!product.isAvailable">
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.isAvailable ? "tak" : "nie"}}</td>
+                <td><button [disabled]="!product.isAvailable">Dodaj do koszyka</button></td>
+              </tr>
+            }
+          </tbody>
+        </table>
+    } @empty {
+      <p>Brak menu.</p>
+    }
+  </section>
+} @else {
+  <h2>Nie odnaleziono restauracji!</h2>
+}
